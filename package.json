@@ -1,0 +1,18 @@
+{
+  "name": "analytic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "analytic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify analytic.js -o bundle.js",
+    "watch": "watchify analytic.js -o bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.2.3"
+  },
+  "dependencies": {}
+}
