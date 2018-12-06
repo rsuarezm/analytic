@@ -1,5 +1,5 @@
 const 
-    json    = require('.json/PDP.json'),
+    json    = require('./json/PDP.json'),
     entries = json.log.entries,
      
     getRecurso   = request  => {
@@ -11,7 +11,7 @@ const
     validateFont = request  => request.url.includes('.ttf') ? 'TTF' : 'WOFF',
     printConsole = entry    => {
         const {time, request, response} = entry
-        console.log(`Saca la calaca, WAP, PDP, ${validateFont(request)}, ${getRecurso(request)}, ${getTimeInMs(time)} ms, ${getSizeInKb(response)} KB, Externo`)
+        console.log(`WAP, PDP, ${validateFont(request)}, ${getRecurso(request)}, ${getTimeInMs(time)} ms, ${getSizeInKb(response)} KB, Externo`)
     }
 
 entries.forEach(entry => {
