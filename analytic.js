@@ -1,6 +1,8 @@
 const
-    json = require('./json/PLP.json'),
-    entries = json.log.entries
+    plp = require('./json/PLP.json'),
+    blp = require('./json/BLP.json'),
+    plp_entries  = plp.log.entries,
+    blp_entries  = blp.log.entries
 
 const
     printMessage = text => console.log(`-------- ${text} --------`),
@@ -36,21 +38,21 @@ const
     }
 
 printMessage('JAVASCRIPT')
-entries.forEach(entry => {
+plp_entries.forEach(entry => {
     if (contains(entry, ['.js'])) printConsole(entry)
 })
 
 printMessage('CSS')
-entries.forEach(entry => {
+plp_entries.forEach(entry => {
     if (contains(entry, ['.css'])) printConsole(entry)
 })
 
 printMessage('IMAGES')
-entries.forEach(entry => {
+plp_entries.forEach(entry => {
     if (contains(entry, ['.svg', '.gif', '.jpg', '.png'])) printConsole(entry)
 })
 
 printMessage('FONTS')
-entries.forEach(entry => {
+plp_entries.forEach(entry => {
     if (contains(entry, ['.woff', '.ttf', '.woff2'])) printConsole(entry)
 })

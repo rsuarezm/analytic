@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify analytic.js -o bundle.js",
-    "watch": "watchify analytic.js -o bundle.js"
+    "watch": "watchify analytic.js -o bundle.js",
+    "start": "npm run watch"
   },
   "keywords": [],
   "author": "",
